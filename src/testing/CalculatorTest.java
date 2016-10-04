@@ -13,7 +13,7 @@ public class CalculatorTest {
 		
 		Calculator calc1 = new Calculator(10, 20);
 		
-		double displayVal = calc1.getDisplayVal();
+		double displayVal = calc1.getDisplayVal().doubleValue();
 		if(displayVal != 10) {
 			System.out.println("calc1 display val: " + displayVal);
 			pass = false;
@@ -25,7 +25,7 @@ public class CalculatorTest {
 			pass = false;
 		}
 		
-		double referenceVal = calc1.getReferenceVal();
+		double referenceVal = calc1.getReferenceVal().doubleValue();
 		if(referenceVal != 20){
 			System.out.println("calc1 reference val: " + referenceVal);
 			pass = false;
@@ -33,7 +33,7 @@ public class CalculatorTest {
 		
 		Calculator calc2 = new Calculator();
 		
-		displayVal = calc2.getDisplayVal();
+		displayVal = calc2.getDisplayVal().doubleValue();
 		if(displayVal != 0) {
 			System.out.println("calc2 display val: " + displayVal);
 			pass = false;
@@ -45,7 +45,7 @@ public class CalculatorTest {
 			pass = false;
 		}
 		
-		referenceVal = calc2.getReferenceVal();
+		referenceVal = calc2.getReferenceVal().doubleValue();
 		if(referenceVal != 0){
 			System.out.println("calc2 reference val: " + referenceVal);
 			pass = false;
@@ -60,7 +60,7 @@ public class CalculatorTest {
 		
 		Calculator calc1 = new Calculator();
 		
-		calc1.concatDisplayStr('2');
+		calc1.concatDisplay('2');
 		
 		String displayStr = calc1.getDisplayStr();
 		if(!displayStr.equals("2")){
@@ -68,13 +68,13 @@ public class CalculatorTest {
 			pass = false;
 		}
 		
-		double displayVal = calc1.getDisplayVal();
+		double displayVal = calc1.getDisplayVal().doubleValue();
 		if(displayVal != 2){
 			System.out.println("concat 1 display val: " + displayVal);
 			pass = false;
 		}
 		
-		calc1.concatDisplayStr('3');
+		calc1.concatDisplay('3');
 		
 		displayStr = calc1.getDisplayStr();
 		if(!displayStr.equals("23")){
@@ -82,13 +82,13 @@ public class CalculatorTest {
 			pass = false;
 		}
 		
-		displayVal = calc1.getDisplayVal();
+		displayVal = calc1.getDisplayVal().doubleValue();
 		if(displayVal != 23){
 			System.out.println("concat 2 display val: " + displayVal);
 			pass = false;
 		}
 		
-		calc1.concatDisplayStr('.');
+		calc1.concatDisplay('.');
 		
 		displayStr = calc1.getDisplayStr();
 		if(!displayStr.equals("23.")){
@@ -96,13 +96,13 @@ public class CalculatorTest {
 			pass = false;
 		}
 		
-		displayVal = calc1.getDisplayVal();
+		displayVal = calc1.getDisplayVal().doubleValue();
 		if(displayVal != 23){
 			System.out.println("concat 3 display val: " + displayVal);
 			pass = false;
 		}
 		
-		calc1.concatDisplayStr('.');
+		calc1.concatDisplay('.');
 		
 		displayStr = calc1.getDisplayStr();
 		if(!displayStr.equals("23.")){
@@ -110,13 +110,13 @@ public class CalculatorTest {
 			pass = false;
 		}
 		
-		displayVal = calc1.getDisplayVal();
+		displayVal = calc1.getDisplayVal().doubleValue();
 		if(displayVal != 23){
 			System.out.println("concat 4 display val: " + displayVal);
 			pass = false;
 		}
 		
-		calc1.concatDisplayStr('8');
+		calc1.concatDisplay('8');
 		
 		displayStr = calc1.getDisplayStr();
 		if(!displayStr.equals("23.8")){
@@ -124,7 +124,7 @@ public class CalculatorTest {
 			pass = false;
 		}
 		
-		displayVal = calc1.getDisplayVal();
+		displayVal = calc1.getDisplayVal().doubleValue();
 		if(displayVal != 23.8){
 			System.out.println("concat 5 display val: " + displayVal);
 			pass = false;
