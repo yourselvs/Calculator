@@ -167,7 +167,6 @@ public class OperandTest {
 		Calculator calc = new Calculator(4, 0);
 		
 		calc = inverse.press(calc);
-		
 		String displayStr = calc.getDisplayStr();
 		if(!displayStr.equals("0.25")){
 			pass = false;
